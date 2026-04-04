@@ -17,7 +17,5 @@ export const noticia = sqliteTable("noticia", {
   titulo: text("titulo").notNull(),
   texto: text("texto").notNull(),
   cidadeId: integer("cidade_id").references(() => cidade.id),
-  dataCriacao: text("data_criacao").default(
-    new Date().toISOString()
-  ),
+  dataCriacao: integer("data_criacao", { mode: "timestamp" }).notNull(),
 });

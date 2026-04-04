@@ -6,7 +6,7 @@ export async function cadastrarCidade() {
   const ufs = await db.select().from(uf);
 
   if (ufs.length === 0) {
-    console.log("⚠️ Cadastre uma UF primeiro!");
+    console.log(" Cadastre uma UF primeiro!");
     return;
   }
 
@@ -23,5 +23,5 @@ export async function cadastrarCidade() {
     ufId: ufs[escolha - 1].id,
   });
 
-  console.log("✅ Cidade cadastrada!");
+  console.log(" Cidade cadastrada!");
 }

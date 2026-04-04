@@ -8,5 +8,5 @@ export async function cadastrarUF() {
 
   await db.insert(uf).values({ nome, sigla });
 
-  console.log("✅ UF cadastrada com sucesso!");
+  console.log(" UF cadastrada com sucesso!");
 }
